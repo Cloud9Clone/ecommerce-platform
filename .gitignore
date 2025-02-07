@@ -1,0 +1,18 @@
+# Java dependencies
+commerce-service/target/
+commerce-service/.mvn/
+commerce-service/.idea/
+commerce-service/*.iml
+
+# Python dependencies
+analytics-service/__pycache__/
+analytics-service/venv/
+
+# Angular dependencies
+ui-app/node_modules/
+ui-app/dist/
+
+# General ignores
+.DS_Store
+*.log
+.env

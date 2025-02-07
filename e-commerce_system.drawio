@@ -1,0 +1,440 @@
+<mxfile host="app.diagrams.net" modified="2025-02-07T14:19:45.903Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" etag="GIjaFn5y41OJRRgEB-2x" version="24.2.2" type="device" pages="4">
+  <diagram name="Overall_Architecture" id="VLXalevurvoehM8J5otL">
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="330" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-35" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="110" y="32.73" width="250" height="227.27" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-33" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="490" y="60" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-4" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="580" y="165" width="78.57" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-3" value="(MySQL/&lt;br&gt;PostgreSQL)&amp;nbsp;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="260" y="160" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-1" value="Orders&lt;br&gt;Users&lt;br&gt;Payments&lt;br&gt;(Spring Boot)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="91.43" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-2" value="Analytics&lt;br&gt;ML&lt;br&gt;(Flask)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="120" width="91.43" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-5" value="Dashboard&lt;br&gt;Purchase&lt;br&gt;Managements&lt;br&gt;(Angular)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Room for Improvements&lt;/h1&gt;&lt;p&gt;Security:&lt;br&gt;&amp;nbsp;- JWT Authentication for API access&lt;br&gt;&amp;nbsp;- Rate-limiting for API endpoints&lt;br&gt;&lt;br&gt;Performance Optimization:&lt;br&gt;&amp;nbsp;- Redis caching for frequent API calls&lt;br&gt;&amp;nbsp;- Asynchronous background tasks for heavy ML jobs&lt;br&gt;&lt;/p&gt;&lt;p&gt;Scalability:&lt;br&gt;&amp;nbsp;- Deploy microservices with Docker &amp;amp; Kubernetes&lt;br&gt;&amp;nbsp;- CI/CD pipelines for auto-deployment&lt;/p&gt;&lt;p&gt;New Features:&lt;br&gt;&amp;nbsp;- AI-based Personalized Product Recommendations&lt;br&gt;&amp;nbsp;- Predictive Demand Forecasting&lt;br&gt;&amp;nbsp;- Fraud detection on suspicious transactions&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="290" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Key Decisions&lt;/h1&gt;&lt;p&gt;Django vs Flask -&amp;gt; Flask/FastAPI is better for a microservice-based ML&lt;br&gt;Grafana Insights -&amp;gt; Show sales trends, customer analytics, fraud detection using (ML)&lt;br&gt;Real-time Dashboard -&amp;gt; WebSockets&lt;br&gt;Product Images -&amp;gt; S3-like storage (MinIO locally), URLs in the database&lt;br&gt;Inventory Management -&amp;gt; Admin panel for adding/updating products&lt;br&gt;Kafka vs. RabbitMQ -&amp;gt; Kafka for event-driven ML processing, RabbitMQ for notifications&lt;br&gt;MySQL vs PostgreSQL vs MongoDB -&amp;gt; PostgreSQL for transactions, MongoDB for analytics&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="480" width="500" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-10" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Grafana&lt;/h1&gt;&lt;p&gt;Core Idea:&amp;nbsp;&lt;br&gt;&amp;nbsp;- Provides powerful real-time dashboards out of the box&lt;br&gt;&amp;nbsp;- Can handle large time-series datasets efficiently&lt;br&gt;&amp;nbsp;- Mainly used for visualizing business insights, not for data processing&lt;/p&gt;&lt;p&gt;Alternative:&amp;nbsp;&lt;br&gt;&amp;nbsp;- Angular + Chart.js / D3.js&lt;/p&gt;&lt;p&gt;Example Business Insights for E-Commerce:&lt;br&gt;&amp;nbsp;- Total sales over time (Time Series Graph)&lt;br&gt;&amp;nbsp;- Most purchased products (Bar Chart)&lt;br&gt;&amp;nbsp;- Customer behavior analytics (Heatmaps, Clustering)&lt;br&gt;&amp;nbsp;- Fraud detection alerts (Anomaly detection)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="620" width="410" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-12" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="tnH4ttXlhKEU7Pji1RbM-5" target="tnH4ttXlhKEU7Pji1RbM-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="sourcePoint" />
+            <mxPoint x="620" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="556" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-13" value="WebSockets&lt;br&gt;(Live Updates)&lt;br&gt;JWT" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="290" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-14" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="tnH4ttXlhKEU7Pji1RbM-5" target="tnH4ttXlhKEU7Pji1RbM-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="sourcePoint" />
+            <mxPoint x="240" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="246" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-15" value="REST API calls&lt;br&gt;(CRUD)&lt;br&gt;JWT" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="290" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-16" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.344;exitY=-0.011;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tnH4ttXlhKEU7Pji1RbM-3" target="tnH4ttXlhKEU7Pji1RbM-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="sourcePoint" />
+            <mxPoint x="620" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-17" value="Kafka&lt;br&gt;SASL + SSL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="130" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-19" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Storage of Images&lt;/h1&gt;&lt;p&gt;AWS S3:&amp;nbsp;&lt;br&gt;&amp;nbsp;-&amp;nbsp;&lt;/p&gt;&lt;p&gt;MinIO:&amp;nbsp;&lt;br&gt;&amp;nbsp;- Open-Source Alternative to S3&lt;br&gt;&amp;nbsp;- Self-hosted S3-compatible object storage&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;- Works exactly like S3 but runs locally&lt;br&gt;&amp;nbsp;- Stores images efficiently inside a Docker container&lt;br&gt;&amp;nbsp;- Fully compatible with AWS SDK, later migratable to S3&lt;br&gt;&amp;nbsp;- Save only the image URL in PostgreSQL/MySQL&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="810" width="330" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-21" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Key Components&lt;/h1&gt;&lt;p&gt;Admin Panel (Angular (if fully custom) / Django Admin (if quick setup))&lt;br&gt;Analytics Dashboard (Grafana (for business insights) / Custom Angular Charts)&lt;br&gt;Frontend-Backend Communication (WebSockets for real-time updates)&lt;br&gt;Local Object Storage (MinIO as S3 replacement)&lt;br&gt;Messaging System (Kafka for ML events, RabbitMQ for order notifications)&lt;br&gt;Database Usage (PostgreSQL for transactions, MongoDB for analytics)&lt;br&gt;Spring Boot microservice: Stores only real-time business data (transactions, orders, users, payments)&lt;br&gt;ML Service (MongoDB): Better for storing aggregated data, predictions, and insights&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="40" width="640" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-22" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Design Patterns&lt;/h1&gt;&lt;p&gt;- &lt;b&gt;Strategy Pattern&lt;/b&gt;: Allows switching between different authentication methods (Email/Password, Google, Meta, etc.)&lt;br&gt;- &lt;b&gt;Factory Pattern&lt;/b&gt;: Creates different authentication services dynamically&lt;br&gt;- &lt;b&gt;Decorator Pattern&lt;/b&gt;: Adds extra security layers (2FA, role-based access)&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="810" width="370" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-23" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Authentication&lt;/h1&gt;&lt;p&gt;- Spring Boot handles authentication (JWT or OAuth2)&lt;br&gt;- Users table stores login credentials&lt;br&gt;- Google &amp;amp; Meta authentication can be added later via Strategy Pattern&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1040" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-24" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ML Service&lt;/h1&gt;&lt;p&gt;Realistic use cases:&lt;br&gt;&amp;nbsp;- Apriori (Market Basket Analysis)&lt;br&gt;&amp;nbsp;- Customer Segmentation (Clustering): Group users into categories like &quot;Frequent Buyers&quot;, &quot;One-Time Shoppers&quot;, etc.&lt;br&gt;&amp;nbsp;- Sales Forecasting (Time Series Prediction): With Prophet/LSTMs predict next month&#39;s sales based on historical data. Angular dashboard shows predicted revenue vs actual.&lt;br&gt;&amp;nbsp;- Fraud Detection (Anomaly Detection): Use Isolation Forest to detect suspicious transactions. If a fraudilent order is detected, it sends an alert to the Admin Panel (via WebSockets).&lt;br&gt;&amp;nbsp;- Personalized Product Recommendations (Collaborative Filtering)&lt;br&gt;&amp;nbsp;- Suggests products based on purchase history&lt;br&gt;&amp;nbsp;- Churn Prediction (Customer Retention): LogisticRegression or XGBoost to predict if a customer will stop buying&lt;br&gt;&amp;nbsp;- Demand Forecasting (Time Series Forecasting with ARIMA, LSTM, Prophet)&amp;nbsp;&lt;br&gt;&amp;nbsp;-&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="810" width="640" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-27" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Relational vs NoSQL Database&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&lt;b&gt;Relational (MySQL, PostgreSQL) - structured/transactional data&lt;/b&gt;:&lt;br&gt;&amp;nbsp;- ACID compliance ensures safe transactions (e.g., Order Payments)&lt;br&gt;&amp;nbsp;- Strong Relationships (JOINs) between tables (Users - Orders - Products)&lt;br&gt;&amp;nbsp;- Ensures data consistency and integrity (e.g., no duplicate orders)&lt;br&gt;&lt;br&gt;&lt;b&gt;NoSQL (MongoDB) - analytics &amp;amp; unstructured data&lt;/b&gt;:&lt;br&gt;&amp;nbsp;- Stores flexible, semi-structured data (e.g., ML results, customer insights)&lt;br&gt;&amp;nbsp;- Faster reads &amp;amp; writes for large-scale analytics queries&lt;br&gt;&amp;nbsp;- Perfect for storing real-time statistics from the ML Service&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="500" width="510" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-28" value="E-Mail" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-30" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tnH4ttXlhKEU7Pji1RbM-1" target="tnH4ttXlhKEU7Pji1RbM-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="260" as="sourcePoint" />
+            <mxPoint x="580" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="246" y="95" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-31" value="RabbitMQ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="205" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-32" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Kafka vs RabbitMQ&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&lt;b&gt;Kafka (Event Streaming)&lt;/b&gt;:&lt;br&gt;&amp;nbsp;- Event-driven applications (ML Processing)&lt;br&gt;&amp;nbsp;- Guarantees order of events&lt;br&gt;&amp;nbsp;- Stores event logs&lt;br&gt;&amp;nbsp;- Handles millions of events per second&lt;br&gt;&lt;br&gt;&lt;b&gt;RabbitMQ (Message Queue)&lt;/b&gt;:&lt;br&gt;&amp;nbsp;- Task Queue (Notifications, Order Emails)&lt;br&gt;&amp;nbsp;- No strict ordering&lt;br&gt;&amp;nbsp;- Deletes messages after consumption&lt;br&gt;&amp;nbsp;- Lower throughput&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2070" y="500" width="260" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-34" value="&lt;b&gt;Analytics Service&lt;br&gt;(only via Admin)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="70" width="111.43" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-36" value="&lt;b&gt;Commerce Service&lt;br&gt;&lt;br&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="40" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-37" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Secure Communication&lt;/h1&gt;&lt;p&gt;Frontend sends a JWT token to Spring Boot. Spring Boot validates JWT and forwards requests to the ML Service with authentication headers. ML service checks the token before responding.&lt;br&gt;&lt;br&gt;API Gateway (Optional Advanced Setup)&lt;br&gt;&amp;nbsp;- Use Spring Cloud Gateway or Kong API Gateway to centralize authentication.&lt;br&gt;&amp;nbsp;- Only the Gateway talk to microservices&lt;br&gt;&lt;br&gt;Spring Boot - ML Service:&lt;br&gt;&amp;nbsp;(1) Restrict API Calls to Internal Network (Private Services)&lt;br&gt;&amp;nbsp;(2) Private key in each microservice is validated in every request&lt;br&gt;&amp;nbsp;(3) OAuth2 token instead of JWT&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="230" width="320" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-38" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Project Structure&lt;/h1&gt;&lt;p&gt;project-root:&lt;br&gt;&amp;nbsp;- frontend-angular (Angular App)&lt;br&gt;&amp;nbsp;- backend-springboot (Spring Boot - Orders, Users)&amp;nbsp;&lt;br&gt;&amp;nbsp;- backend-python-ml (Flask, FastAPI ML Service)&lt;br&gt;&amp;nbsp;- docker-compose.yml (Starts all containers)&lt;br&gt;&amp;nbsp;- README.md (Documentation)&lt;br&gt;&lt;br&gt;Starting all containers together -&amp;gt; Docker Compose&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1210" width="310" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-39" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Kafka | Security Mechanisms&amp;nbsp;&lt;/h1&gt;&lt;p&gt;SASL (Simple Authentication and Security Layer) - Authenticate microservices before accessing Kafka (Medium Setup Complexity)&lt;br&gt;SSL/TLS Encryption - Encrypt data in transit between services (Medium Setup Complexity)&lt;br&gt;Kafka ACLs (Access Control Lists) - Restrict which services can product/consume messages (High Setup Complexity)&lt;br&gt;OAuth2/JWT Authentication - Use Spring Boot&#39;s JWT tokens for Kafka (Not supported directly)&lt;br&gt;API Keys (Custom Headers) - Pass Authentication token in Kafka messages (Not recommended)&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1739" y="60" width="720" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-40" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;JWT Token&lt;/h1&gt;&lt;p&gt;&lt;b&gt;JWT Token Leaks&lt;/b&gt; -&amp;gt; Solution: Use short-lived tokens + refresh tokens&lt;br&gt;&lt;b&gt;Main-in-the-Middle (MITM) Attacks&lt;/b&gt; -&amp;gt; Solution: SSL/TLS (HTTPS) for encryption&lt;br&gt;&lt;b&gt;No Service-to-Service Verification&lt;/b&gt; -&amp;gt; Solution: mutual TLS (mTLS) or API keys&lt;br&gt;&lt;b&gt;Token Replay Attacks&lt;/b&gt; -&amp;gt; Solution: JWT expiration + nonces&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1739" y="230" width="700" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tnH4ttXlhKEU7Pji1RbM-42" value="&lt;b&gt;Market-Dashboard&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ZWMgqd2RrDx_wIhKZEdN" name="Analytics_Service">
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3kG8-EqqhI7AJRAp4dw--1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3kG8-EqqhI7AJRAp4dw--2" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="120" y="125" width="78.57" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3kG8-EqqhI7AJRAp4dw--3" value="Analytics&lt;br&gt;ML&lt;br&gt;(Flask)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="91.43" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3kG8-EqqhI7AJRAp4dw--4" value="&lt;b&gt;Analytics Service&lt;br&gt;(only via Admin)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="30" width="111.43" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3kG8-EqqhI7AJRAp4dw--6" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Market Basket Analysis (MBA)&lt;/h1&gt;&lt;p&gt;Solved using Apriori Algorithm or Association Rule Mining&lt;/p&gt;&lt;p&gt;Working Principle:&lt;br&gt;&amp;nbsp;- Data Source: Orders &amp;amp; Purchase History stored in PostgreSQL&lt;br&gt;&amp;nbsp;- ML Processing: Analytics Service analyzes purchase patterns using Apriori&lt;br&gt;&amp;nbsp;- Storage: Analytics Service stores the rules in MongoDB (e.g., &quot;Laptop&quot; -&amp;gt; &quot;Mouse&quot;)&lt;br&gt;&amp;nbsp;- Frontend fetches Recommendations when user views a product&lt;/p&gt;&lt;p&gt;Interaction:&lt;br&gt;&amp;nbsp;- User buys a product&lt;br&gt;&amp;nbsp;- Kafka publishes &quot;Order Completed&quot; Event&lt;br&gt;&amp;nbsp;- Analytics Service updates Product Association Rules in MongoDB&lt;br&gt;&amp;nbsp;- Frontend fetches &quot;Frequently Bought Together&quot; Data from Analytics API&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="20" width="550" height="250" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tzX9iGVPnXeI-DnYd3Tf" name="Data_Model">
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="12nce3ml9mzGQA83-v-D-1" value="Users, Orders, Payments&lt;br&gt;(MySQL/PostgreSQL)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="130" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-2" value="Analytics&lt;br&gt;(MongoDB)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="580" y="40" width="130" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;MySQL/PostgreSQL&amp;nbsp;&lt;/h1&gt;&lt;p&gt;Order Transactions (Used for payments, order processing)&lt;br&gt;Product Catalog (Static product data e.g., name, price, stock)&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="210" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-5" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;MongoDB&amp;nbsp;&lt;/h1&gt;&lt;p&gt;User Behavior Insights&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="475" y="210" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Dataset for E-Commerce&lt;/h1&gt;&lt;p&gt;Retail Transactions Dataset (Sales forecasting, customer trends)&lt;br&gt;Customer Reviews Dataset (Sentiment analysis, BERT)&lt;br&gt;Fraud Transactions Dataset (Fraud detection, Anomaly detection)&lt;br&gt;Product Recommendations Dataset (Market Basket Analysis, Apriori)&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="390" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-9" value="&lt;b&gt;users&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="42" y="888" width="410" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-10" value="&lt;b&gt;user_id&lt;/b&gt; UUID PRIMARY KEY," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-9">
+          <mxGeometry y="26" width="410" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-11" value="&lt;b&gt;name&lt;/b&gt; VARCHAR(100) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-9">
+          <mxGeometry y="52" width="410" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-12" value="&lt;b&gt;email&lt;/b&gt; VARCHAR(100) UNIQUE NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-9">
+          <mxGeometry y="78" width="410" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-13" value="&lt;b&gt;password&lt;/b&gt; VARCHAR(255) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-9">
+          <mxGeometry y="104" width="410" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-14" value="&lt;b&gt;role&lt;/b&gt; VARCHAR(50) CHECK (role IN (&#39;admin&#39;, &#39;customer&#39;)) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-9">
+          <mxGeometry y="130" width="410" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-15" value="&lt;b&gt;created_at&lt;/b&gt; TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-9">
+          <mxGeometry y="156" width="410" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-17" value="&lt;b&gt;products&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="42" y="1108" width="340" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-18" value="&lt;b&gt;product_id&lt;/b&gt; UUID PRIMARY KEY," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="26" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-19" value="&lt;b&gt;name&lt;/b&gt; VARCHAR(255) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="52" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-20" value="&lt;b&gt;description&lt;/b&gt; TEXT," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="78" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-21" value="&lt;b&gt;category_id &lt;/b&gt;UUID REFERENCES &lt;b&gt;categories(category_id)&lt;/b&gt;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="104" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-24" value="&lt;b&gt;price&lt;/b&gt; DECIMAL(10, 2) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="130" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-22" value="&lt;b&gt;stock&lt;/b&gt; INT NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="156" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-25" value="&lt;b&gt;image_url&lt;/b&gt; TEXT," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="182" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-23" value="&lt;b&gt;created_at&lt;/b&gt; TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-17">
+          <mxGeometry y="208" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-26" value="&lt;b&gt;orders&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="512" y="926" width="498" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-27" value="&lt;b&gt;order_id&lt;/b&gt; UUID PRIMARY KEY," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-26">
+          <mxGeometry y="26" width="498" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-28" value="&lt;b&gt;user_id&lt;/b&gt; UUID REFERENCES &lt;b&gt;users(user_id)&lt;/b&gt;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-26">
+          <mxGeometry y="52" width="498" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-29" value="&lt;b&gt;total_price&lt;/b&gt; DECIMAL(10, 2) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-26">
+          <mxGeometry y="78" width="498" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-30" value="&lt;b&gt;status&lt;/b&gt; VARCHAR(50) CHECK (status IN (&#39;pending&#39;, &#39;completed&#39;, &#39;cancelled&#39;)) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-26">
+          <mxGeometry y="104" width="498" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-34" value="&lt;b&gt;created_at&lt;/b&gt; TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-26">
+          <mxGeometry y="130" width="498" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-35" value="&lt;b&gt;order_items&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="1058" width="340" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-36" value="&lt;b&gt;order_item_id&lt;/b&gt; UUID PRIMARY KEY," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-35">
+          <mxGeometry y="26" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-37" value="&lt;b&gt;order_id&lt;/b&gt;&amp;nbsp;UUID REFERENCES &lt;b&gt;orders(order_id)&lt;/b&gt;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-35">
+          <mxGeometry y="52" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-38" value="&lt;b&gt;product_id&lt;/b&gt;&amp;nbsp;UUID REFERENCES &lt;b&gt;products(product_id)&lt;/b&gt;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-35">
+          <mxGeometry y="78" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-39" value="&lt;b&gt;quantity&lt;/b&gt;&amp;nbsp;INT NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-35">
+          <mxGeometry y="104" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-40" value="&lt;b&gt;price&lt;/b&gt; DECIMAL(10, 2) NOT NULL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-35">
+          <mxGeometry y="130" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VcijftciTzm86fOLR_8I-9" value="&lt;b&gt;created_at&lt;/b&gt;&amp;nbsp;TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-35">
+          <mxGeometry y="156" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-44" value="&lt;b&gt;payments&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="810" width="470" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-45" value="&lt;b&gt;payment_id&lt;/b&gt; UUID PRIMARY KEY," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="26" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-46" value="&lt;b&gt;order_id&lt;/b&gt;&amp;nbsp;UUID REFERENCES &lt;b&gt;orders(order_id)&lt;/b&gt;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="52" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-47" value="&lt;b&gt;amount&lt;/b&gt; DECIMAL(10, 2) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="78" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-48" value="&lt;b&gt;payment_method&lt;/b&gt; VARCHAR(50) DEFAULT &#39;credit-card&#39;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="104" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-49" value="&lt;b&gt;status&lt;/b&gt; VARCHAR(50) CHECK (status IN (&#39;pending&#39;, &#39;completed&#39;, &#39;failed&#39;)) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="130" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-50" value="&lt;b&gt;transaction_id&lt;/b&gt; VARCHAR(255)," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="156" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-52" value="&lt;b&gt;created_at&lt;/b&gt; TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-44">
+          <mxGeometry y="182" width="470" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-55" value="&lt;b&gt;Collection &lt;br&gt;&quot;product_recommendations&quot;&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="30" width="340" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-57" value="&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;collection&quot;: &quot;product_recommendations&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;document&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;product_id&quot;: 123,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;frequently_bought_together&quot;: [&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&quot;product_id&quot;: 456, &quot;confidence_score&quot;: 0.89},&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&quot;product_id&quot;: 789, &quot;confidence_score&quot;: 0.76}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-55">
+          <mxGeometry y="40" width="340" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-59" value="&lt;b&gt;Collection &lt;br&gt;&quot;sales_forecast&quot;&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="30" width="340" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-60" value="&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;collection&quot;: &quot;sales_forecast&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;document&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;date&quot;: &quot;2024-02-05&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;predicted_sales&quot;: [&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&quot;product_id&quot;: 123, &quot;units_sold&quot;: 350},&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&quot;product_id&quot;: 456, &quot;units_sold&quot;: 120}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-59">
+          <mxGeometry y="40" width="340" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-61" value="&lt;b&gt;Collection &lt;br&gt;&quot;customer_segments&quot;&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2030" y="30" width="340" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-62" value="&lt;div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;collection&quot;: &quot;customer_segments&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;document&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;user_id&quot;: 42,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;segment&quot;: &quot;high-value-customer&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;lifetime_value&quot;: 2500.00&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-61">
+          <mxGeometry y="40" width="340" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-64" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="12nce3ml9mzGQA83-v-D-10" target="12nce3ml9mzGQA83-v-D-28">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="602" y="1108" as="sourcePoint" />
+            <mxPoint x="702" y="1008" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-65" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToMany;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="12nce3ml9mzGQA83-v-D-38" target="12nce3ml9mzGQA83-v-D-18">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="602" y="1208" as="sourcePoint" />
+            <mxPoint x="702" y="1108" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-66" value="&lt;b&gt;categories&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="432" y="1186" width="340" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-67" value="&lt;b&gt;category_id&lt;/b&gt; UUID PRIMARY KEY," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-66">
+          <mxGeometry y="26" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-68" value="&lt;b&gt;name&lt;/b&gt;&amp;nbsp;VARCHAR(255) UNIQUE NOT NULL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-66">
+          <mxGeometry y="52" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VcijftciTzm86fOLR_8I-8" value="&lt;b&gt;created_at&lt;/b&gt;&amp;nbsp;TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-66">
+          <mxGeometry y="78" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-72" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="12nce3ml9mzGQA83-v-D-67" target="12nce3ml9mzGQA83-v-D-21">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="602" y="1308" as="sourcePoint" />
+            <mxPoint x="702" y="1208" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-73" value="&lt;b&gt;waitlists&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1550" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-74" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-73">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-77" value="Payment with the Strategy Pattern&lt;br&gt;(Later will add Paypal, Stripe, etc...)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1640" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-78" value="Role-Based Access Control (RBAC)&lt;br&gt;(Update user roles in large-scale apps)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1690" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-79" value="&lt;b&gt;product_reviews&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1550" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-80" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-79">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-81" value="&lt;b&gt;discounts&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="1550" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-82" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-81">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-83" value="&lt;b&gt;shipping_addresses&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="512" y="598" width="388" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-84" value="&lt;b&gt;address_id&lt;/b&gt; UUID PRIMARY KEY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="30" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-85" value="&lt;b&gt;user_id&lt;/b&gt; UUID REFERENCES &lt;b&gt;users(user_id)&lt;/b&gt;," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="60" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-86" value="&lt;b&gt;address_line1&lt;/b&gt; VARCHAR(255) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="90" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-87" value="&lt;b&gt;address_line2&lt;/b&gt; VARCHAR(255)," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="120" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-88" value="&lt;b&gt;city&lt;/b&gt; VARCHAR(100) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="150" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-89" value="&lt;b&gt;state&lt;/b&gt; VARCHAR(100) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="180" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-90" value="&lt;b&gt;country&lt;/b&gt; VARCHAR(100) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="210" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-91" value="&lt;b&gt;postal_code&lt;/b&gt; VARCHAR(20) NOT NULL," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="240" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-92" value="&lt;b&gt;created_at&lt;/b&gt; TIMESTAMP DEFAULT CURRENT_TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-83">
+          <mxGeometry y="270" width="388" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-94" value="&lt;b&gt;wishlists&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1550" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12nce3ml9mzGQA83-v-D-95" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="12nce3ml9mzGQA83-v-D-94">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VcijftciTzm86fOLR_8I-1" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="12nce3ml9mzGQA83-v-D-10" target="12nce3ml9mzGQA83-v-D-85">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="602" y="918" as="sourcePoint" />
+            <mxPoint x="702" y="818" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VcijftciTzm86fOLR_8I-2" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="12nce3ml9mzGQA83-v-D-27" target="12nce3ml9mzGQA83-v-D-37">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1052" y="978" as="sourcePoint" />
+            <mxPoint x="562" y="1208" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="472" y="1143" />
+              <mxPoint x="1082" y="1058" />
+              <mxPoint x="832" y="1118" />
+              <mxPoint x="512" y="1043" />
+              <mxPoint x="842" y="1208" />
+              <mxPoint x="812" y="1138" />
+              <mxPoint x="472" y="1123" />
+              <mxPoint x="512" y="1183" />
+              <mxPoint x="532" y="1103" />
+              <mxPoint x="552" y="1173" />
+              <mxPoint x="542" y="1173" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VcijftciTzm86fOLR_8I-10" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="12nce3ml9mzGQA83-v-D-27" target="12nce3ml9mzGQA83-v-D-46">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="900" y="1020" as="sourcePoint" />
+            <mxPoint x="1000" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="YuwO7Jc-38ZijjZ21RTI" name="API_Structure_ECommerce_Service">
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d93teeLwQgnyihDSk0zb-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;API Structure for ECommerce Microservice (Spring Boot)&lt;/h1&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;strong&gt;Entity&lt;/strong&gt;&lt;/th&gt;&lt;th&gt;&lt;strong&gt;Endpoint&lt;/strong&gt;&lt;/th&gt;&lt;th&gt;&lt;strong&gt;Method&lt;/strong&gt;&lt;/th&gt;&lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Users&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/users/register&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Register a new user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/users/login&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Authenticate user (JWT)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/users/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get user details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/users&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get all users (Admin only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/users/{id}/promote&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Promote user to admin (Admin only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Products&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/products&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get all products&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/products/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get product details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/products&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Add a new product (Admin only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/products/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Update product details (Admin only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/products/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Delete a product (Admin only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Orders&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Create a new order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get order details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders/user/{userId}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get user’s orders&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders/{id}/cancel&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Cancel an order (if not completed)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Order Items&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders/{orderId}/items&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get all items in an order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders/{orderId}/items&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Add product to order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/orders/{orderId}/items/{itemId}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove product from order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Payments&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/payments&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Process payment (Auto-confirmed in V1)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/payments/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get payment details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Shipping Addresses&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/addresses&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Add shipping address&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/addresses/{id}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get shipping address&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/addresses/user/{userId}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Get user’s addresses&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="690" height="500" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
