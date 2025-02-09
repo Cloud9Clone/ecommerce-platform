@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:54320/ecommerce
+    username: my_user
+    password: my_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true

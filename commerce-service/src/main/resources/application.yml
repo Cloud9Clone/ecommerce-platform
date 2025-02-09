@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: commerce-service
+
+  profiles:
+    active: dev # Change this to "test" or any other relevant as needed
+
+  jpa:
+    hibernate:
+      ddl-auto: validate # Only for schema checking
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true # Schema migrations will be performed with Flyway
