@@ -34,11 +34,11 @@ CREATE TABLE products (
 CREATE TABLE orders (
     order_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
-    street VARCHAR(255) NOT NULL,
-    city VARCHAR(100) NOT NULL,
-    state VARCHAR(100) NOT NULL,
-    country VARCHAR(100) NOT NULL,
-    postal_code VARCHAR(20) NOT NULL,
+    street VARCHAR(255),        -- street will be filled before completing the order
+    city VARCHAR(100),          -- street will be filled before completing the order
+    state VARCHAR(100),         -- street will be filled before completing the order
+    country VARCHAR(100),       -- street will be filled before completing the order
+    postal_code VARCHAR(20),    -- street will be filled before completing the order
     total_price DECIMAL(10, 2) NOT NULL,
     status VARCHAR(50) NOT NULL CHECK (status IN ('PENDING', 'CONFIRMED', 'CANCELED')),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

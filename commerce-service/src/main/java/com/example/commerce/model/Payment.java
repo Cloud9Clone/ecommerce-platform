@@ -1,5 +1,6 @@
 package com.example.commerce.model;
 
+import com.example.commerce.model.enums.PaymentMethod;
 import com.example.commerce.model.enums.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,15 +25,16 @@ public class Payment {
     @Column(name = "payment_id")
     private UUID paymentId;
 
-    @OneToOne
+    @OneToOne(orphanRemoval = true)
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
     @Column(nullable = false)
     private BigDecimal amount;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "payment_method", nullable = false, length = 50)
-    private String paymentMethod;
+    private PaymentMethod paymentMethod;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 50)

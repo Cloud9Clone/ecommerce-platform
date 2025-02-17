@@ -1,6 +1,8 @@
 package com.example.commerce.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,10 +25,10 @@ public class Product {
     @Column(name = "product_id")
     private UUID productId;
 
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @ManyToOne
@@ -37,7 +39,7 @@ public class Product {
     private BigDecimal price;
 
     @Column(nullable = false)
-    private int stock;
+    private Integer stock;
 
     @Column(name = "image_url", nullable = false)
     private String imageUrl;

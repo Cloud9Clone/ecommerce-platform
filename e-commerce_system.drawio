@@ -437,6 +437,9 @@
         <mxCell id="Q9Wmzte1ad9lgxN5WYiO-1" value="&lt;li&gt;&lt;strong&gt;&lt;code&gt;GET /api/users/{userId}/addresses&lt;/code&gt;&lt;/strong&gt; → Retrieve the user&#39;s saved addresses.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;code&gt;POST /api/users/{userId}/addresses&lt;/code&gt;&lt;/strong&gt; → Add a new address.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;code&gt;PUT /api/users/{userId}/addresses/{addressId}&lt;/code&gt;&lt;/strong&gt; → Edit an existing address.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;code&gt;DELETE /api/users/{userId}/addresses/{addressId}&lt;/code&gt;&lt;/strong&gt; → Delete an address.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;code&gt;POST /api/orders&lt;/code&gt;&lt;/strong&gt; → Create an order with a snapshot of the selected shipping address.&lt;/li&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="60" y="530" width="700" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="Km8ATcUveD6w6mtrESP--1" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/auth/signup&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Register (Sign up) a new user&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;/api/auth/login&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Login and get a JWT token&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="650" width="630" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
