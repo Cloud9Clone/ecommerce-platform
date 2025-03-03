@@ -1,1 +1,35 @@
-<p>product-list works!</p>
+<div class="products-list">
+  <mat-grid-list cols="4" rowHeight="1:1" gutterSize="16px">
+    <mat-grid-tile *ngFor="let product of paginatedProducts()">
+      <mat-card class="product-card">
+        <!-- Image Section -->
+        <div class="image-container">
+          <img [ngSrc]="product.imageUrl" [alt]="product.name" class="product-image" width="256" height="256" priority />
+        </div>
+
+        <!-- Product Information -->
+        <mat-card-content class="product-info">
+          <h3 class="product-title">{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          <p class="product-price">€{{ product.price }}</p>
+        </mat-card-content>
+
+        <!-- Action Buttons -->
+        <mat-card-actions align="end">
+          <button mat-button color="primary" [routerLink]="'/products/' + product.id">View Details</button>
+          <button mat-button color="accent" (click)="addToCart(product)">Add to Cart</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<!-- Paginator -->
+<mat-paginator
+  [length]="filteredProducts().length"
+  [pageSize]="productsPerPage"
+  [pageSizeOptions]="[8, 16, 32, 50]"
+  [showFirstLastButtons]="true"
+  (page)="onPageChange($event)"
+  aria-label="Product Pagination">
+</mat-paginator>

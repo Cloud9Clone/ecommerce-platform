@@ -1,1 +1,54 @@
-<p>product-details works!</p>
+<div class="product-details-container" *ngIf="product()">
+  <mat-card class="product-details-card">
+    <!-- Product Image with "New" Banner -->
+    <div class="image-container">
+      <img [ngSrc]="product()?.imageUrl ?? 'assets/images/commerci_default_placeholder.jpg'"
+           [alt]="product()?.name ?? 'Product Image'"
+           class="product-image"
+           width="256"
+           height="256" />
+      <div *ngIf="isNewProduct()" class="new-banner">New</div>
+    </div>
+
+    <!-- Product Information -->
+    <mat-card-content>
+      <!-- Product Name -->
+      <h2>{{ product()?.name }}</h2>
+
+      <!-- Category -->
+      <p class="category"><strong>Category:</strong> {{ product()?.category }}</p>
+
+      <!-- Creation Date -->
+      <p class="created-at">
+        <strong>Added on:</strong> {{ formattedDate() }}
+      </p>
+
+      <!-- Description -->
+      <p class="description">{{ product()?.description }}</p>
+
+      <!-- Price -->
+      <p class="price"><strong>Price:</strong> {{ product()?.price }}€</p>
+
+      <!-- Stock Availability -->
+      <p class="stock" [ngClass]="{'out-of-stock': (product()?.stock ?? 0) === 0}">
+        <strong>Stock: </strong>
+        <span *ngIf="(product()?.stock ?? 0) > 0">{{ product()?.stock }}</span>
+        <span *ngIf="(product()?.stock ?? 0) === 0" class="out-of-stock-text">Out of stock</span>
+      </p>
+
+      <!-- Quantity Selector -->
+      <div class="quantity-selector">
+        <input type="number" [(ngModel)]="quantity" min="1"
+               [max]="product()?.stock ?? 1" (change)="validateQuantity()" />
+      </div>
+    </mat-card-content>
+
+    <!-- Action Button -->
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="addToCart()"
+              [disabled]="(product()?.stock ?? 0) === 0">
+        Add to Cart
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

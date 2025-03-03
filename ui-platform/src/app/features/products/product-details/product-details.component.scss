@@ -1,0 +1,145 @@
+.product-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product-details-card {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #FFF2DB;
+
+  .image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+
+    //img {
+    //  max-width: 100%;
+    //  height: auto;
+    //  border-radius: 8px;
+    //  display: block;
+    //}
+    //
+    //.new-banner {
+    //  position: absolute;
+    //  background-color: #003092;
+    //  color: #FFF2DB;
+    //  padding: 4px 10px;
+    //  font-size: 0.9rem;
+    //  font-weight: bold;
+    //  border-radius: 4px;
+    //  pointer-events: none;
+    //  white-space: nowrap;
+    //}
+  }
+
+  .product-image {
+    display: block;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .new-banner {
+    position: absolute;
+    top: calc(50% - 122px);
+    left: calc(50% - 134px);
+    background-color: #003092;
+    color: #FFF2DB;
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      color: #003092;
+    }
+
+    .category, .created-at, .description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .stock {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #00879E;
+
+      &.out-of-stock {
+        color: #D32F2F;
+      }
+
+      .out-of-stock-text {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #D32F2F;
+      }
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #003092;
+    }
+  }
+
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+
+    input {
+      width: 50px;
+      text-align: center;
+      font-size: 1.2rem;
+      border: 1px solid #003092;
+      padding: 5px;
+      border-radius: 4px;
+    }
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    button {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #003092;
+      color: white;
+      &:hover {
+        background-color: #002070;
+      }
+      &:disabled {
+        background-color: #CCC;
+        color: #666666;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

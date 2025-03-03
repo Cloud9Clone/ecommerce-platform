@@ -1,0 +1,112 @@
+:host {
+  display: block;
+  padding: 1rem;
+  background: #f9f9f9; // Light grey background for contrast
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+
+  h3 {
+    text-align: center;
+    color: #003092; // Primary color (blue)
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  mat-form-field {
+    width: 100%;
+
+    .mat-mdc-form-field {
+      width: 100%;
+    }
+  }
+
+  // ✅ NEW: Category Selection Styling (Checkboxes in Two Columns)
+  .category-selection {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // ✅ Two-column layout
+      gap: -0.5rem;
+    }
+
+    mat-checkbox {
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+      color: #333; // Slightly darker for better visibility
+    }
+  }
+
+  // Price Range Section
+  .price-range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    .price-field {
+      width: 45%;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+        border-color: #003092;
+        box-shadow: 0 0 5px rgba(0, 48, 146, 0.3);
+      }
+    }
+
+    .separator {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #003092;
+    }
+  }
+
+  // Styling for the sorting dropdown
+  .mat-select {
+    width: 100%;
+  }
+
+  // Checkbox Styling for "New Products" checkbox
+  mat-checkbox {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #00879E; // Teal color
+  }
+
+  .filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  button {
+    min-width: 120px;
+  }
+}

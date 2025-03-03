@@ -1,0 +1,19 @@
+<div class="products-page-container">
+  <div class="products-layout">
+    <!-- Filters on the left (or on top for small screens) -->
+    <aside class="filters">
+      <app-product-filter (filtersChanged)="onFilterChange($event)"></app-product-filter>
+    </aside>
+
+    <!-- Product List on the right -->
+    <section class="products">
+      <h2>{{ pageTitle() }}</h2>
+
+      <!-- Total Product Count -->
+      <p class="product-count"> {{ productCountMessage() }}</p>
+
+      <app-product-list [filters]="activeFilters()"
+                        (updateCount)="updateFilteredCount($event)"></app-product-list>
+    </section>
+  </div>
+</div>

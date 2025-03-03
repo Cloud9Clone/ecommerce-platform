@@ -1,1 +1,49 @@
-<p>product-filter works!</p>
+<div class="filter-container">
+  <h3>Filter Products</h3>
+
+  <!-- Category Selection (Checkboxes in Two Columns) -->
+  <div class="category-selection">
+    <label>Categories</label>
+    <div class="category-grid">
+      <mat-checkbox *ngFor="let category of categories()"
+                    [checked]="selectedCategories().includes(category)"
+                    (change)="toggleCategory(category)">
+        {{ category }}
+      </mat-checkbox>
+    </div>
+  </div>
+
+  <!-- Price Range Selection -->
+  <div class="price-range">
+    <mat-form-field appearance="outline" class="price-field">
+      <mat-label>Min Price</mat-label>
+      <input matInput type="number" [value]="priceRange().min" (input)="onMinPriceChange($event)">
+    </mat-form-field>
+
+    <span class="separator">-</span>
+
+    <mat-form-field appearance="outline" class="price-field">
+      <mat-label>Max Price</mat-label>
+      <input matInput type="number" [value]="priceRange().max" (input)="onMaxPriceChange($event)">
+    </mat-form-field>
+  </div>
+
+  <!-- "New Products" Checkbox -->
+  <mat-checkbox [checked]="showNewProducts()" (change)="toggleNewProducts()">New Products (Last 30 days)</mat-checkbox>
+
+  <!-- Sorting Options -->
+  <mat-form-field appearance="outline">
+    <mat-label>Sort By</mat-label>
+    <mat-select [value]="selectedSort()" (selectionChange)="updateSort($event.value)">
+      <mat-option *ngFor="let sort of sortOptions()" [value]="sort.value">
+        {{ sort.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Action Buttons -->
+  <div class="filter-actions">
+    <button mat-stroked-button color="warn" (click)="resetFilters()">Reset Filters</button>
+    <button mat-raised-button color="primary" (click)="applyFilters()">Apply Filters</button>
+  </div>
+</div>

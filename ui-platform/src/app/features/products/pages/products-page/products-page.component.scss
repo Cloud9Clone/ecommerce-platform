@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  padding: 5rem 1rem 1rem; // Adjusts padding to push content down so it can stay below the header
+}
+
+.products-page-container {
+  padding: 1rem;
+}
+
+.products-layout {
+  display: flex;
+  gap: 1.5rem;
+
+  /* Filters Box */
+  .filters {
+    width: 25%; // Filters take 1/4 of the width
+    min-width: 250px;
+  }
+
+  /* Products Box */
+  .products {
+    flex-grow: 1; // Product list takes remaining space
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      color: #003092;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .product-count {
+      font-size: 1rem;
+      color: #666;
+      font-weight: normal;
+      margin-bottom: 1rem;
+      margin-top: -0.50rem;
+    }
+  }
+
+  /* Responsive Design: Stack Filter on Top on Small Screens */
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    .filters {
+      width: 100%;
+    }
+
+    .products {
+      width: 100%;
+    }
+  }
+}

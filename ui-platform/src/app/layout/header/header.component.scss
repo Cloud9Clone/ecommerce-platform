@@ -1,0 +1,75 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    mat-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      background-color: #003092; // Dark Blue
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+
+      .logo-img {
+        height: 40px;
+        width: auto;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #FFF2DB; // Warm White
+      }
+
+      .spacer {
+        flex-grow: 1;
+      }
+
+      .icons {
+        display: flex;
+        gap: 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #FFF2DB; // Warm White
+        margin-right: 10px;
+        font-weight: 500;
+        padding: 10px 15px; // Ensures proper spacing
+        border-radius: 20px; // Gives oval button effect
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav a:hover {
+        background-color: #00879E; // Green Hover Effect
+        color: #FFF2DB;
+      }
+
+      // Changing icon color to white for visibility
+      .white-icon {
+        color: #FFF2DB !important;
+      }
+    }
+  }
+
+/* Dropdown menu */
+mat-menu {
+  background-color: #FFF2DB;
+  border-radius: 5px;
+}
+
+/* Fix logout button */
+mat-menu button {
+  width: 100%;
+  justify-content: flex-start;
+  color: #003092;
+}
